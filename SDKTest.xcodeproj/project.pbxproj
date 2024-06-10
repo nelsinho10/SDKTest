@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2F4A5EA32C13A99A00046DF7 /* SDKTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F4A5EA22C13A99A00046DF7 /* SDKTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F4A5EAA2C13AB8000046DF7 /* SDKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A5EA92C13AB8000046DF7 /* SDKTest.swift */; };
+		4A9F0A36B947D0379552A839 /* Pods_SDKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833430F42E13A0D9B3E8992E /* Pods_SDKTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F4A5E9F2C13A99A00046DF7 /* SDKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4A5EA22C13A99A00046DF7 /* SDKTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKTest.h; sourceTree = "<group>"; };
+		2F4A5EA92C13AB8000046DF7 /* SDKTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKTest.swift; sourceTree = "<group>"; };
+		33409E8003CDF1872369E50D /* Pods-SDKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest.release.xcconfig"; path = "Target Support Files/Pods-SDKTest/Pods-SDKTest.release.xcconfig"; sourceTree = "<group>"; };
+		833430F42E13A0D9B3E8992E /* Pods_SDKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4A175306FDFCDED8FE9E439 /* Pods-SDKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKTest.debug.xcconfig"; path = "Target Support Files/Pods-SDKTest/Pods-SDKTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,17 +26,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9F0A36B947D0379552A839 /* Pods_SDKTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1C56DD2C1796C40010A91F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2F4A5EA92C13AB8000046DF7 /* SDKTest.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		2F4A5E952C13A99A00046DF7 = {
 			isa = PBXGroup;
 			children = (
 				2F4A5EA12C13A99A00046DF7 /* SDKTest */,
 				2F4A5EA02C13A99A00046DF7 /* Products */,
+				CD96C8B0A72BE112CA633D08 /* Pods */,
+				3D604F29599A9C9AC341C4F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +62,27 @@
 		2F4A5EA12C13A99A00046DF7 /* SDKTest */ = {
 			isa = PBXGroup;
 			children = (
+				2F1C56DD2C1796C40010A91F /* Classes */,
 				2F4A5EA22C13A99A00046DF7 /* SDKTest.h */,
 			);
 			path = SDKTest;
+			sourceTree = "<group>";
+		};
+		3D604F29599A9C9AC341C4F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				833430F42E13A0D9B3E8992E /* Pods_SDKTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD96C8B0A72BE112CA633D08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4A175306FDFCDED8FE9E439 /* Pods-SDKTest.debug.xcconfig */,
+				33409E8003CDF1872369E50D /* Pods-SDKTest.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4A5EA62C13A99A00046DF7 /* Build configuration list for PBXNativeTarget "SDKTest" */;
 			buildPhases = (
+				16105B38F2D8E091F31E9868 /* [CP] Check Pods Manifest.lock */,
 				2F4A5E9A2C13A99A00046DF7 /* Headers */,
 				2F4A5E9B2C13A99A00046DF7 /* Sources */,
 				2F4A5E9C2C13A99A00046DF7 /* Frameworks */,
@@ -93,6 +129,7 @@
 				TargetAttributes = {
 					2F4A5E9E2C13A99A00046DF7 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -124,11 +161,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16105B38F2D8E091F31E9868 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDKTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F4A5E9B2C13A99A00046DF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4A5EAA2C13AB8000046DF7 /* SDKTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +325,10 @@
 		};
 		2F4A5EA72C13A99A00046DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4A175306FDFCDED8FE9E439 /* Pods-SDKTest.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -288,6 +353,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,8 +361,10 @@
 		};
 		2F4A5EA82C13A99A00046DF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33409E8003CDF1872369E50D /* Pods-SDKTest.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
